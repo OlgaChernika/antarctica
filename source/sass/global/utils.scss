@@ -66,3 +66,13 @@
   /* stylelint-disable-next-line */
   transition: none !important;
 }
+
+.fixed {
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  overflow: hidden;
+  background: rgba($color-prussian-blue, 0.5);
+}

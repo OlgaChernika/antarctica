@@ -1,0 +1,15 @@
+.footer {
+  padding: 50px 0;
+  background-color: $color-tangaroa;
+  min-height: 138px;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 70px 1fr min-content;
+}
+
+.footer__logo {
+  width: 70px;
+  height: 38px;
+}

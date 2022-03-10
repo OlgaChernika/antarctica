@@ -7,14 +7,46 @@
     <meta name="description" content="Описание проекта">
     <title>Круизы в Антарктику</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header header--no-js">
+        <div class="header__container container">
+          <div class="header__top-wrapper">
+            <!-- тут будет svg -->
+            <img class="header__logo logo logo--white" src="img/sprite/logo.svg" width="70" height="38" alt="Логотип">
+            <!--  -->
+            <button class="header__toggle btn" type="button" aria-label="Кнопка открытия/закрытия меню"></button>
+          </div>
+          <div class="header__menu header__menu--closed">
+            <!-- тут будет svg -->
+            <img class="header__logo logo logo--black" src="img/svg/logo-black.svg" width="42" height="22" alt="Логотип">
+            <!--  -->
+            <nav class="header__nav nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a class="nav__link header__link" href="#advantages">Преимущества</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link header__link" href="#">Направления</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link header__link" href="#routes">Ближайшие&nbsp;круизы</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link header__link" href="#communication">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </header>
       <main>
-        <section class="intro">
+        <!-- <section class="intro">
           <div class="container">
             <h1>Тестовая страница.</h1>
             <p>На данной странице показан пример модальных окон.</p>
@@ -22,10 +54,50 @@
             <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
             <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
           </div>
-        </section>
+        </section> -->
+
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="footer">
+        <div class="footer__container container">
+          <!-- тут будет svg -->
+          <img class="footer__logo logo logo--white" src="img/sprite/logo.svg" width="70" height="38" alt="Логотип">
+          <!--  -->
+          <nav class="footer__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link footer__link" href="#advantages">Преимущества</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link footer__link" href="#">Направления</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link footer__link" href="#routes">Ближайшие&nbsp;круизы</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link footer__link" href="#communication">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="#" class="social__link" aria-label="Наша страница на Facebook">
+
+                </a>
+              </li>
+              <li class="social__item" aria-label="Наша страница в Instagram">
+                <a href="#" class="social__link">
+
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link" aria-label="Наша страница в Twitter">
+
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
     <div class="modal modal--preload" data-modal="feedback">

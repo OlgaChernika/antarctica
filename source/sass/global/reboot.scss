@@ -15,7 +15,7 @@ html {
   font-weight: 400;
   font-size: $fz-default;
   line-height: 24px;
-  font-family: $ff-placeholder;
+  font-family: $ff-montserrat;
   color: $color-default-black;
 
   -webkit-font-smoothing: antialiased;
@@ -29,13 +29,20 @@ html {
 body {
   width: 100%;
   height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 
-  background-color: $color-default-white;
+  background-color: $color-alice-blue;
+  color: $color-tangaroa;
+  font-size: $fz-default;
+  font-weight: normal;
 }
 
 a {
-  color: $color-default-black;
+  color: $color-tangaroa;
   text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
 }
 
 img,
