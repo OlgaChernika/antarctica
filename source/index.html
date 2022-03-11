@@ -46,20 +46,42 @@
         </div>
       </header>
       <main>
+        <h1 class="visually-hidden">Круизы в&nbsp;Антарктику</h1>
         <section class="promo">
           <div class="promo__bg">
-            <img src="img/content/promo-desk.jpg" alt="" width="100%" height="650">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/content/promo-desk.webp 1x, img/content/promo-desk@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/promo-tab.webp 1x, img/content/promo-tab@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/content/promo-mob.webp 1x, img/content/promo-mob@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="img/content/promo-tab.jpg 1x, img/content/promo-tab@2x.jpg 2x">
+              <source media="(max-width: 767px)" srcset="img/content/promo-mob.jpg 1x, img/content/promo-mob@2x.jpg 2x">
+              <img src="img/content/promo-desk.jpg" srcset="img/content/promo-desk@2x.jpg 2x" alt="Антарктика" width="100%" height="650">
+            </picture>
           </div>
           <div class="promo__container container">
-            <div class="promo__title-wrapper">
+            <div class="promo__wrapper">
               <h2 class="promo__title">Круизы в&nbsp;Антарктику</h2>
               <p class="promo__tagline">Волшебный мир айсбергов и&nbsp;пингвинов</p>
             </div>
           </div>
         </section>
-        <section class="about-trip container">
-          <h3 class="about-trip__title title">Путешествие на&nbsp;край Земли</h3>
-          <p class="about-trip__description">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+        <section class="about-trip">
+          <div class="about-trip__container container">
+            <div class="about-trip__wrapper">
+              <h2 class="about-trip__title title">Путешествие на&nbsp;край Земли</h2>
+              <p class="about-trip__description">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+            </div>
+            <div class="about-trip__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1024px)" srcset="img/content/penguins-desk.webp 1x, img/content/penguins-desk@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/penguins-tab.webp 1x, img/content/penguins-tab@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/content/penguins-mob.webp 1x, img/content/penguins-mob@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/content/penguins-tab.jpg 1x, img/content/penguins-tab@2x.jpg 2x">
+                <source media="(max-width: 767px)" srcset="img/content/penguins-mob.jpg 1x, img/content/penguins-mob@2x.jpg 2x">
+                <img src="img/content/penguins-desk.jpg" srcset="img/content/penguins-desk@2x.jpg 2x" alt="Пингвины" width="560" height="301">
+              </picture>
+            </div>
+          </div>
         </section>
         <!-- <section class="intro">
           <div class="container">

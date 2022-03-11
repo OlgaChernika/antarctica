@@ -1,12 +1,23 @@
 .header {
+  position: relative;
   padding: 25px 0;
   width: 100%;
-  background-color: $color-tangaroa;
   min-height: 108px;
   color: $color-alice-blue;
   display: flex;
   align-items: center;
   transition: all $trans-default;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-tangaroa;
+    z-index: -2;
+  }
 
   @include vp-1023 {
     min-height: 80px;
@@ -155,7 +166,7 @@
 
     &--closed {
       right: -100%;
-      background-color: $color-tangaroa;
+      background-color: $color-transparent;
     }
   }
 }
