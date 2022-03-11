@@ -1,15 +1,67 @@
 .footer {
-  padding: 50px 0;
+  padding: 48px 0;
   background-color: $color-tangaroa;
   min-height: 138px;
+  transition: all $trans-default;
+
+  @include vp-1023 {
+    min-height: 120px;
+    padding: 46px 0;
+  }
+
+  @include vp-767 {
+    min-height: 283px;
+    padding: 40px 0;
+  }
 }
 
 .footer__container {
   display: grid;
   grid-template-columns: 70px 1fr min-content;
+
+  @include vp-1023 {
+    grid-template-columns: 38px 1fr max-content;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
 }
 
 .footer__logo {
-  width: 70px;
-  height: 38px;
+  @include vp-767 {
+    margin-bottom: 30px;
+  }
+}
+
+.footer__nav {
+  margin-left: 7px;
+
+  @include vp-767 {
+    margin-bottom: 20px;
+  }
+}
+
+.footer__link {
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-alice-blue;
+    min-height: 28px;
+  }
+}
+
+.footer__social {
+  margin-left: 20px;
+
+  @include vp-1023 {
+    margin-left: 5px;
+  }
 }

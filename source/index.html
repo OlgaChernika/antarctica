@@ -27,7 +27,7 @@
             <img class="header__logo logo logo--black" src="img/svg/logo-black.svg" width="42" height="22" alt="Логотип">
             <!--  -->
             <nav class="header__nav nav">
-              <ul class="nav__list">
+              <ul class="nav__list header__nav-list">
                 <li class="nav__item">
                   <a class="nav__link header__link" href="#advantages">Преимущества</a>
                 </li>
@@ -46,6 +46,21 @@
         </div>
       </header>
       <main>
+        <section class="promo">
+          <div class="promo__bg">
+            <img src="img/content/promo-desk.jpg" alt="" width="100%" height="650">
+          </div>
+          <div class="promo__container container">
+            <div class="promo__title-wrapper">
+              <h2 class="promo__title">Круизы в&nbsp;Антарктику</h2>
+              <p class="promo__tagline">Волшебный мир айсбергов и&nbsp;пингвинов</p>
+            </div>
+          </div>
+        </section>
+        <section class="about-trip container">
+          <h3 class="about-trip__title title">Путешествие на&nbsp;край Земли</h3>
+          <p class="about-trip__description">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+        </section>
         <!-- <section class="intro">
           <div class="container">
             <h1>Тестовая страница.</h1>
@@ -63,7 +78,7 @@
           <img class="footer__logo logo logo--white" src="img/sprite/logo.svg" width="70" height="38" alt="Логотип">
           <!--  -->
           <nav class="footer__nav nav">
-            <ul class="nav__list">
+            <ul class="nav__list footer__nav-list">
               <li class="nav__item">
                 <a class="nav__link footer__link" href="#advantages">Преимущества</a>
               </li>
@@ -82,17 +97,23 @@
             <ul class="social__list">
               <li class="social__item">
                 <a href="#" class="social__link" aria-label="Наша страница на Facebook">
-
+                  <svg class="social__icon social__icon--fb" width="11" height="20">
+                    <use xlink:href="img/sprite_auto.svg#fb-icon"></use>
+                  </svg>
                 </a>
               </li>
               <li class="social__item" aria-label="Наша страница в Instagram">
                 <a href="#" class="social__link">
-
+                  <svg class="social__icon social__icon--inst" width="20" height="20">
+                    <use xlink:href="img/sprite_auto.svg#inst-icon"></use>
+                  </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a href="#" class="social__link" aria-label="Наша страница в Twitter">
-
+                  <svg class="social__icon social__icon--twitt" width="20" height="16">
+                    <use xlink:href="img/sprite_auto.svg#twitt-icon"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
