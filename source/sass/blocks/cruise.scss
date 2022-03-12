@@ -1,0 +1,134 @@
+.cruise {
+  position: relative;
+  background-color: $color-tangaroa;
+}
+
+.cruise:hover,
+.cruise:focus-within {
+  .cruise__wrapper {
+    animation: display 0.3s ease-out;
+    display: block;
+  }
+}
+
+.cruise__link {
+  position: relative;
+  width: 100%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, $color-transparent 0%, $color-transparent 50%, $color-tangaroa 100%);
+  }
+}
+
+.cruise__link img {
+  height: 386px;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.cruise__name {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: calc(100% - 60px);
+  color: $color-alice-blue;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include vp-1023 {
+    bottom: 35px;
+    left: 35px;
+    width: calc(100% - 70px);
+  }
+
+  @include vp-767 {
+    bottom: 25px;
+    left: 25px;
+    width: calc(100% - 50px);
+  }
+}
+
+.cruise__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 386px;
+  padding: 30px 25px;
+  color: $color-alice-blue;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  z-index: 1;
+  display: none;
+  overflow-y: auto;
+  background-color: $color-tangaroa;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  @include vp-1023 {
+    padding: 35px;
+  }
+
+  @include vp-767 {
+    padding: 35px 25px;
+  }
+}
+
+.cruise__wrapper::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.cruise__title {
+  margin: 0 0 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.cruise__info {
+  margin: 0 0 10px;
+  color: $color-quartz;
+  display: flex;
+  flex-direction: column;
+
+  &:last-of-type {
+    margin: 0 0 20px;
+  }
+}
+
+.cruise__label {
+  margin: 0 0 5px;
+  font-weight: 500;
+  color: $color-alice-blue;
+}
+
+.cruise__button {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+}
+
+@keyframes display {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}

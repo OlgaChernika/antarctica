@@ -1,0 +1,13 @@
+.input {
+  border: none;
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 16px;
+  color: $color-tangaroa;
+  font-size: 14px;
+  line-height: 21px;
+
+  &::placeholder {
+    color: rgba($color-tangaroa, 0.7);
+  }
+}
