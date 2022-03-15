@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  transition: all $trans-default;
+  //transition: all $trans-default;
 }
 
 html,
@@ -45,6 +45,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   display: inline-flex;
+  user-select: none;
 }
 
 picture {
@@ -138,4 +139,5 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+  user-select: none;
 }

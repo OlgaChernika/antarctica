@@ -1,11 +1,12 @@
 .booking {
   position: relative;
+
   padding: 50px 0;
-  min-height: 555px;
+  overflow: hidden;
 
   @include vp-1023 {
-    padding: 100px 0;
     min-height: auto;
+    padding: 88px 0 100px;
   }
 
   @include vp-767 {
@@ -17,19 +18,26 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  min-height: 100%;
   z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
   background-color: $color-pattens-blue;
 }
 
 .booking__bg img {
-  object-fit: cover;
+  width: 100%;
+  max-width: 1920px;
   min-height: 100%;
+  margin: 0 auto;
+
+  object-fit: cover;
 }
 
 .booking__container {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
 
   @include vp-1023 {
@@ -42,23 +50,25 @@
 
   @include vp-1023 {
     width: 419px;
-    margin: 0 auto 60px;
+    margin: 0 auto 52px;
   }
 
   @include vp-767 {
-    margin: 0 auto 40px;
     width: 100%;
+    margin: 0 auto 40px;
   }
 }
 
 .booking__title {
-  margin: 0 0 30px;
+  margin: 0 0 9px;
+
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
 
   @include vp-1023 {
-    margin: 0 auto 25px;
+    margin: 0 auto 5px;
+
     font-size: 34px;
     line-height: 51px;
     text-align: center;
@@ -72,28 +82,37 @@
 
 .booking__description {
   margin: 0;
+  padding-right: 25%;
+
   font-size: 18px;
   line-height: 27px;
 
   @include vp-1023 {
     padding: 0 30px;
+
     text-align: center;
   }
 
   @include vp-767 {
     padding: 0;
+
     font-size: 16px;
     line-height: 22px;
   }
 }
 
 .booking__form {
-  margin: 0 auto;
   width: 403px;
   min-height: 455px;
+  margin: 0 10.4% 0 auto;
+
+  @include vp-1023 {
+    margin: 0 auto;
+  }
 
   @include vp-767 {
     width: 100%;
+    max-width: 403px;
     min-height: 460px;
   }
 }

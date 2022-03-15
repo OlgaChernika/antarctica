@@ -1,6 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initMenu} from './menu/menu';
+import {initAnchors} from './smooth-scroll/smooth-scroll';
+import {initMap} from './map/map';
 
 // ---------------------------------
 
@@ -17,6 +19,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    initMenu();
+    initAnchors();
+    initMap();
     initModals();
   });
 });
@@ -45,5 +50,3 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
-
-initMenu();

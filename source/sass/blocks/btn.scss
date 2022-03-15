@@ -3,9 +3,9 @@
   margin: 0;
   padding: 10px 20px;
 
-  background-color: $color-alice-blue;
-
   color: $color-tangaroa;
+
+  background-color: $color-alice-blue;
   border: none;
   cursor: pointer;
 
@@ -25,6 +25,10 @@
     &:hover,
     &:focus {
       opacity: 0.8;
+    }
+
+    &:active {
+      color: rgba($color-tangaroa, 0.8);
     }
   }
 }

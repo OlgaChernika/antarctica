@@ -1,22 +1,13 @@
 .header {
   position: relative;
-  padding: 25px 0;
-  width: 100%;
-  min-height: 108px;
-  color: $color-alice-blue;
+
   display: flex;
   align-items: center;
+  width: 100%;
+  min-height: 108px;
+  padding: 25px 0;
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $color-tangaroa;
-    z-index: -2;
-  }
+  color: $color-alice-blue;
 
   @include vp-1023 {
     min-height: 80px;
@@ -25,6 +16,54 @@
   @include vp-767 {
     min-height: 62px;
     padding: 20px 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $color-tangaroa;
+  }
+
+  &--no-js {
+    .header__top-wrapper {
+      @include vp-767 {
+        display: none;
+      }
+    }
+
+    .header__menu.is-close {
+      position: relative;
+      top: unset;
+      right: unset;
+      z-index: 1;
+
+      min-height: auto;
+
+      background-color: $color-transparent;
+
+      @include vp-767 {
+        padding-bottom: 62px;
+      }
+    }
+
+    .header__toggle {
+      display: none;
+    }
+
+    .header__link {
+      color: $color-alice-blue;
+    }
+
+    .logo--black {
+      fill: $color-alice-blue;
+    }
   }
 }
 
@@ -35,18 +74,18 @@
 }
 
 .header__top-wrapper {
-  margin-right: auto;
   display: flex;
-  min-height: 100%;
   align-items: center;
+  min-height: 100%;
+  margin-right: auto;
 
   @include vp-1023 {
     margin-right: 70px;
   }
 
   @include vp-767 {
-    width: 100%;
     justify-content: space-between;
+    width: 100%;
     margin: 0;
   }
 }
@@ -67,11 +106,12 @@
 }
 
 .header__toggle {
-  margin: 0;
-  padding: 0;
+  display: none;
   width: 24px;
   height: 21px;
-  display: none;
+  margin: 0;
+  padding: 0;
+
   background-color: $color-transparent;
 
   @include vp-767 {
@@ -79,6 +119,7 @@
     top: 20px;
     right: 15px;
     z-index: 99;
+
     display: block;
 
     &::before {
@@ -114,8 +155,9 @@
       transition: all $trans-default;
     }
 
-    &--closed {
-      background-color: $color-transparent;
+    &.is-close {
+      position: fixed;
+
       width: 20px;
       height: 20px;
 
@@ -147,15 +189,15 @@
   min-width: 50%;
 
   @include vp-767 {
-    display: flex;
     position: fixed;
     top: 0;
     right: 0;
     z-index: 98;
 
+    display: flex;
     width: 285px;
-    min-height: 568px;
     height: 100%;
+    min-height: 568px;
     padding: 75px 0 30px 25px;
     overflow: auto;
 
@@ -163,9 +205,8 @@
 
     transition: right $trans-default;
 
-    &--closed {
+    &.is-close {
       right: -100%;
-      background-color: $color-transparent;
     }
   }
 }
@@ -176,9 +217,7 @@
 }
 
 .header__nav-list {
-  @include vp-1023 {
-    justify-content: flex-end;
-  }
+  justify-content: flex-end;
 }
 
 .header__link {

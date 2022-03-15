@@ -1,56 +1,66 @@
 .cruise {
   position: relative;
+
   background-color: $color-tangaroa;
 }
 
 .cruise:hover,
 .cruise:focus-within {
   .cruise__wrapper {
-    animation: display 0.3s ease-out;
     display: block;
+
+    animation: display 0.3s ease-out;
   }
 }
 
 .cruise__link {
   position: relative;
+
   width: 100%;
 
   &::before {
-    position: absolute;
     content: "";
+    position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     background: linear-gradient(to bottom, $color-transparent 0%, $color-transparent 50%, $color-tangaroa 100%);
   }
 }
 
 .cruise__link img {
-  height: 386px;
   min-width: 100%;
+  height: 386px;
+
   object-fit: cover;
 }
 
 .cruise__name {
   position: absolute;
-  bottom: 30px;
+  bottom: 22px;
   left: 30px;
+
   width: calc(100% - 60px);
-  color: $color-alice-blue;
+
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
+  color: $color-alice-blue;
 
   @include vp-1023 {
-    bottom: 35px;
+    bottom: 27px;
     left: 35px;
+
     width: calc(100% - 70px);
   }
 
   @include vp-767 {
     bottom: 25px;
     left: 25px;
+
     width: calc(100% - 50px);
   }
 }
@@ -59,27 +69,31 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
+
+  display: none;
   width: 100%;
   height: 386px;
   padding: 30px 25px;
-  color: $color-alice-blue;
+  overflow-y: auto;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  z-index: 1;
-  display: none;
-  overflow-y: auto;
+  color: $color-alice-blue;
+
   background-color: $color-tangaroa;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 
   @include vp-1023 {
-    padding: 35px;
+    padding: 30px 35px;
   }
 
   @include vp-767 {
     padding: 35px 25px;
   }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .cruise__wrapper::-webkit-scrollbar {
@@ -88,33 +102,37 @@
 }
 
 .cruise__title {
-  margin: 0 0 20px;
+  margin: 0 0 12px;
+
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
 }
 
 .cruise__info {
-  margin: 0 0 10px;
-  color: $color-quartz;
   display: flex;
   flex-direction: column;
+  margin: 0 0 11px;
+
+  color: $color-quartz;
 
   &:last-of-type {
-    margin: 0 0 20px;
+    margin: 0 0 25px;
   }
 }
 
 .cruise__label {
-  margin: 0 0 5px;
+  margin: 0 0 1px;
+
   font-weight: 500;
   color: $color-alice-blue;
 }
 
 .cruise__button {
-  width: 100%;
   justify-content: center;
   align-items: center;
+  width: 100%;
+
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
@@ -124,11 +142,13 @@
 @keyframes display {
   0% {
     display: block;
+
     opacity: 0;
   }
 
   100% {
     display: block;
+
     opacity: 1;
   }
 }

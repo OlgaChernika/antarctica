@@ -1,17 +1,20 @@
 .social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 125px;
   min-height: 100%;
-  min-width: 121px;
   margin: 0;
   padding: 0;
+
   list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 23px;
+
+  gap: 25px;
 
   @include vp-1023 {
-    min-width: 86px;
-    gap: 13px;
+    min-width: 92px;
+
+    gap: 17px;
   }
 
   @include vp-767 {
@@ -20,9 +23,9 @@
 }
 
 .social__item {
-  min-height: 100%;
-  min-width: 25px;
   display: flex;
+  min-width: 25px;
+  min-height: 100%;
 
   @include vp-1023 {
     min-width: 20px;
@@ -30,9 +33,26 @@
 }
 
 .social__link {
-  width: 100%;
   justify-content: center;
   align-items: center;
+  width: 100%;
+
+  &:hover .social__icon,
+  &:focus .social__icon {
+    opacity: 0.8;
+
+    @include vp-767 {
+      opacity: 1;
+    }
+  }
+
+  &:active .social__icon {
+    opacity: 0.5;
+
+    @include vp-767 {
+      opacity: 1;
+    }
+  }
 }
 
 .social__icon {
