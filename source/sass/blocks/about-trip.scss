@@ -6,7 +6,7 @@
   }
 
   @include vp-767 {
-    padding: 59px 0 65px;
+    padding: 58px 0 65px;
   }
 }
 
@@ -40,7 +40,7 @@
   }
 }
 
-.about-trip__title {
+.about-trip h2 {
   margin: 0 auto 25px 0;
 
   @include vp-1023 {
@@ -57,7 +57,7 @@
   }
 }
 
-.about-trip__description {
+.about-trip p {
   margin: 0;
 }
 

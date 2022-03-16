@@ -1,0 +1,44 @@
+.intro {
+  position: relative;
+}
+
+.intro__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  min-height: 638px;
+  height: 100%;
+
+  background-color: $color-royal-blue;
+
+  object-fit: cover;
+
+  @include vp-1023 {
+    min-height: 638px;
+  }
+
+  @include vp-767 {
+    min-height: 500px;
+  }
+}
+
+.intro__bg img {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  background-color: $color-royal-blue;
+
+  object-fit: cover;
+
+  @include vp-1023 {
+    min-height: 638px;
+  }
+
+  @include vp-767 {
+    min-height: 500px;
+  }
+}

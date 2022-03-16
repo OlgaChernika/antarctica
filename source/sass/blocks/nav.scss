@@ -1,71 +1,68 @@
-.nav__list {
-  display: flex;
-  flex-wrap: wrap;
-  min-width: 100%;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-
-  @include vp-767 {
-    flex-direction: column;
-    justify-content: start;
-  }
-}
-
-.nav__item {
-  display: flex;
-  margin: 0 0 0 33px;
-  padding: 10px 0;
-
-  @include vp-1023 {
-    margin-left: 23px;
-    padding: 6px 0;
-  }
-
-  @include vp-767 {
-    margin: 0 0 10px 0;
+.nav {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
+    margin: 0;
     padding: 0;
-  }
-}
 
-.nav__link {
-  justify-content: center;
-  align-items: center;
-  min-width: 100%;
-
-  font-weight: 500;
-  line-height: 20px;
-  color: $color-alice-blue;
-
-  @include vp-1023 {
-    font-size: 14px;
-    line-height: 17px;
-  }
-
-  @include vp-767 {
-    justify-content: flex-start;
-
-    font-size: 18px;
-    line-height: 22px;
-    text-align: left;
-    color: $color-tangaroa;
-  }
-
-  &:hover,
-  &:focus {
-    color: rgba($color-alice-blue, 0.8);
+    list-style: none;
 
     @include vp-767 {
-      color: $color-tangaroa;
+      flex-direction: column;
+      justify-content: start;
     }
   }
 
-  &:active {
-    color: rgba($color-alice-blue, 0.5);
+  li {
+    display: flex;
+    margin: 0 0 0 33px;
+    padding: 10px 0;
+
+    @include vp-1023 {
+      margin-left: 23px;
+      padding: 6px 0;
+    }
 
     @include vp-767 {
+      margin: 0 0 10px 0;
+      padding: 0;
+    }
+  }
+
+  a {
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    transition: color $trans-default;
+
+    font-weight: 500;
+    line-height: 20px;
+    color: $color-alice-blue;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    @include vp-767 {
+      justify-content: flex-start;
+
+      font-size: 18px;
+      line-height: 22px;
+      text-align: left;
       color: $color-tangaroa;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: rgba($color-alice-blue, 0.8);
+
+        @include vp-767 {
+          color: rgba($color-tangaroa, 0.8);
+        }
+      }
     }
   }
 }

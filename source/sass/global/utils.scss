@@ -67,9 +67,8 @@
   transition: none !important;
 }
 
-.fixed {
+.overlay {
   position: relative;
-  overflow: hidden;
 
   &::before {
     content: "";
@@ -88,5 +87,11 @@
 }
 
 .is-invalid {
+  transition: box-shadow $trans-default;
   box-shadow: 0 0 10px 4px $color-torch-red;
+}
+
+.is-valid {
+  transition: box-shadow $trans-default;
+  box-shadow: 0 0 10px 4px #1fb65e;
 }

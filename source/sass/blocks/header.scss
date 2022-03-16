@@ -43,14 +43,11 @@
       top: unset;
       right: unset;
       z-index: 1;
+      display: flex;
 
       min-height: auto;
 
       background-color: $color-transparent;
-
-      @include vp-767 {
-        padding-bottom: 62px;
-      }
     }
 
     .header__toggle {
@@ -90,22 +87,7 @@
   }
 }
 
-.header__logo {
-  width: 70px;
-  height: 38px;
-
-  @include vp-1023 {
-    width: 38px;
-    height: 20px;
-  }
-
-  @include vp-767 {
-    width: 42px;
-    height: 22px;
-  }
-}
-
-.header__toggle {
+.header__top-wrapper button {
   display: none;
   width: 24px;
   height: 21px;
@@ -113,6 +95,13 @@
   padding: 0;
 
   background-color: $color-transparent;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
 
   @include vp-767 {
     position: absolute;
@@ -158,8 +147,10 @@
     &.is-close {
       position: fixed;
 
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
+      top: 22px;
+      right: 7px;
 
       &::before {
         top: 9px;
@@ -203,25 +194,44 @@
 
     background-color: $color-alice-blue;
 
-    transition: right $trans-default;
+    animation: display 0.5s ease;
 
     &.is-close {
-      right: -100%;
+      display: none;
+      animation: display 0.5s ease;
     }
   }
 }
 
-.header__nav {
+.header nav {
   display: flex;
   min-height: 100%;
+
+  ul {
+    justify-content: flex-end;
+
+    @include vp-767 {
+      justify-content: flex-start;
+    }
+  }
+
+  a {
+    @include vp-767 {
+      min-height: 40px;
+    }
+  }
 }
 
-.header__nav-list {
-  justify-content: flex-end;
-}
+@keyframes display {
+  0% {
+    display: block;
 
-.header__link {
-  @include vp-767 {
-    min-height: 40px;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+
+    opacity: 1;
   }
 }

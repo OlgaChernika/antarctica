@@ -8,7 +8,7 @@
   }
 
   @include vp-767 {
-    padding: 65px 0 35px;
+    padding: 57px 0 34px;
   }
 }
 
@@ -34,11 +34,15 @@
 }
 
 
-.advantages__title {
+.advantages h2 {
   margin-bottom: 49px;
+
+  @include vp-767 {
+    margin-bottom: 30px;
+  }
 }
 
-.advantages__list {
+.advantages ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -58,7 +62,7 @@
   }
 }
 
-.advantages__item {
+.advantages li {
   position: relative;
 
   width: 31%;
@@ -77,11 +81,11 @@
   @include vp-767 {
     width: 290px;
     min-height: 250px;
-    padding: 65px 20px 20px;
+    padding: 71px 20px 20px;
   }
 }
 
-.advantages__label {
+.advantages h3 {
   margin: 0 0 10px;
 
   font-weight: 500;
@@ -91,9 +95,14 @@
   @include vp-1023 {
     line-height: 25px;
   }
+
+  @include vp-767 {
+    margin: 0 0 8px;
+    padding-right: 49px;
+  }
 }
 
-.advantages__description {
+.advantages ul p {
   margin: 0;
 
   font-size: 14px;
@@ -112,6 +121,10 @@
   @include vp-1023 {
     top: 26px;
     left: 20px;
+  }
+
+  @include vp-767 {
+    top: 25px;
   }
 
   &--ship {
@@ -136,6 +149,10 @@
       width: 33px;
       height: 19px;
     }
+
+    @include vp-767 {
+      top: 28px;
+    }
   }
 
   &--boat {
@@ -149,6 +166,10 @@
 
       width: 38px;
       height: 13px;
+    }
+
+    @include vp-767 {
+      top: 31px;
     }
   }
 }

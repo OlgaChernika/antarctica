@@ -1,8 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {initMenu} from './menu/menu';
-import {initAnchors} from './smooth-scroll/smooth-scroll';
-import {initMap} from './map/map';
+import {initMenu} from './modules/menu';
+import {initAnchors} from './modules/smooth-scroll';
+import {initMap} from './modules/map';
+import {initFormValidate} from './modules/validation/init-form-validate';
 
 // ---------------------------------
 
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initMenu();
     initAnchors();
     initMap();
+    initFormValidate();
     initModals();
   });
 });

@@ -1,12 +1,9 @@
 .promo {
   position: relative;
-  z-index: -1;
 
   min-height: 542px;
 
   color: $color-alice-blue;
-
-  background-color: $color-royal-blue;
 
   @include vp-1023 {
     min-height: 558px;
@@ -14,51 +11,6 @@
 
   @include vp-767 {
     min-height: 438px;
-  }
-}
-
-.promo__bg {
-  position: absolute;
-  top: -108px;
-  left: 0;
-  z-index: -1;
-
-  width: 100%;
-  height: 650px;
-
-  background-color: $color-royal-blue;
-
-  object-fit: cover;
-
-  @include vp-1023 {
-    top: -80px;
-
-    height: 638px;
-  }
-
-  @include vp-767 {
-    top: -62px;
-
-    height: 500px;
-  }
-}
-
-.promo__bg img {
-  width: 100%;
-  max-width: 1920px;
-  height: 650px;
-  margin: 0 auto;
-
-  background-color: $color-royal-blue;
-
-  object-fit: cover;
-
-  @include vp-1023 {
-    height: 638px;
-  }
-
-  @include vp-767 {
-    height: 500px;
   }
 }
 
@@ -80,11 +32,11 @@
   }
 
   @include vp-767 {
-    padding-top: 116px;
+    padding-top: 115px;
   }
 }
 
-.promo__title {
+.promo h2 {
   margin: 0 0 12px;
   padding: 0;
 
@@ -105,7 +57,7 @@
   }
 }
 
-.promo__tagline {
+.promo p {
   margin: 0 25% 20px 0;
 
   font-size: 20px;

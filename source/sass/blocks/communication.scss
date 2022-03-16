@@ -6,7 +6,7 @@
   }
 
   @include vp-767 {
-    padding: 65px 0;
+    padding: 43px 0 65px;
   }
 }
 
@@ -32,10 +32,11 @@
 
   @include vp-767 {
     order: 0;
+    margin-bottom: 13px;
   }
 }
 
-.communication__description {
+.communication p {
   margin: 0 0 32px;
 
   font-weight: 500;
@@ -47,52 +48,31 @@
   }
 }
 
-.communication__list {
+.communication ul {
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
-.communication__item {
+.communication li {
   margin-bottom: 22px;
 }
 
-.communication__link {
+.communication__wrapper a {
   position: relative;
+  transition: color $trans-default;
 
   padding-left: 28px;
 
-  &:hover,
-  &:focus {
-    color: rgba($color-tangaroa, 0.8);
-
-    @include vp-767 {
-      color: $color-tangaroa;
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: rgba($color-tangaroa, 0.8);
 
       .communication__icon {
-        opacity: 1;
+        opacity: 0.8;
       }
-    }
-
-    .communication__icon {
-      opacity: 0.8;
-    }
-  }
-
-  &:active {
-    color: rgba($color-tangaroa, 0.5);
-
-    @include vp-767 {
-      color: $color-tangaroa;
-
-      .communication__icon {
-        opacity: 1;
-      }
-    }
-
-    .communication__icon {
-      opacity: 0.5;
     }
   }
 }
@@ -101,6 +81,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  transition: opacity $trans-default;
 
   &--map {
     @include vp-1023 {
