@@ -3,20 +3,6 @@ const toggle = document.querySelector('.header__toggle');
 const logo = document.querySelector('.logo--white');
 const menu = document.querySelector('.header__menu');
 
-// const toggleMenuElements = () => {
-//   if (body.classList.contains('scroll-lock') || body.classList.contains('scroll-lock-ios')) {
-//     window.focusLock.unlock('.header__menu');
-//     window.scrollLock.enableScrolling();
-//   } else {
-//     window.scrollLock.disableScrolling();
-//   }
-//   body.classList.toggle('overlay');
-//   menu.classList.toggle('is-close');
-//   toggle.classList.toggle('is-close');
-//   logo.classList.toggle('is-hide');
-//   window.focusLock.lock('.header');
-// };
-
 const openMenu = () => {
   body.classList.add('overlay');
   menu.classList.remove('is-close');
