@@ -1,20 +1,28 @@
-const body = document.querySelector('body');
+const overlay = document.querySelector('.overlay');
 const toggle = document.querySelector('.header__toggle');
 const logo = document.querySelector('.logo--white');
 const menu = document.querySelector('.header__menu');
 const headerLinks = document.querySelectorAll('.header [data-anchor]');
 
+const onOverlayClick = ({target}) => {
+  if (target.closest('.overlay')) {
+    closeMenu();
+    overlay.removeEventListener('click', onOverlayClick);
+  }
+};
+
 const openMenu = () => {
-  body.classList.add('overlay');
+  overlay.classList.add('is-active');
   menu.classList.remove('is-close');
   toggle.classList.add('is-close');
   logo.classList.add('is-hide');
   window.focusLock.lock('.header');
   window.scrollLock.disableScrolling();
+  document.addEventListener('click', onOverlayClick);
 };
 
 export const closeMenu = () => {
-  body.classList.remove('overlay');
+  overlay.classList.remove('is-active');
   menu.classList.add('is-close');
   toggle.classList.remove('is-close');
   logo.classList.remove('is-hide');

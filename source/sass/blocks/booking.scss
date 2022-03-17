@@ -39,6 +39,7 @@
   display: grid;
 
   grid-template-columns: 1fr 1fr;
+  column-gap: 25px;
 
   @include vp-1023 {
     display: block;
@@ -105,7 +106,7 @@
 .booking__form {
   width: 403px;
   min-height: 455px;
-  margin: 0 10.4% 0 auto;
+  margin: 0 10.5% 0 auto;
 
   @include vp-1023 {
     margin: 0 auto;

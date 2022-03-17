@@ -2,17 +2,23 @@
   position: relative;
 
   background-color: $color-tangaroa;
+  overflow-y: auto;
 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
-  @media (hover: hover), screen and (min-width: 0\0) {
-    &:hover,
-    &:focus-within {
-      .cruise__wrapper {
-        display: block;
+  &:hover,
+  &:focus-within {
+    .cruise__wrapper {
+      display: block;
 
-        animation: display 0.3s ease-out;
-      }
+      animation: display 0.3s ease-out;
     }
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
 }
 
@@ -35,7 +41,7 @@
 
   img {
     min-width: 100%;
-    height: 386px;
+    // height: 386px;
 
     object-fit: cover;
     background-color: $color-tangaroa;
@@ -77,9 +83,8 @@
 
   display: none;
   width: 100%;
-  height: 386px;
   padding: 30px 25px;
-  overflow-y: auto;
+  min-height: stretch;
 
   font-weight: 400;
   font-size: 14px;
@@ -95,14 +100,6 @@
   @include vp-767 {
     padding: 35px 25px;
   }
-
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.cruise__wrapper::-webkit-scrollbar {
-  width: 0;
-  height: 0;
 }
 
 .cruise h3 {
