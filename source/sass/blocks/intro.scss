@@ -12,6 +12,8 @@
   min-height: 638px;
   height: 100%;
 
+  background-color: $color-royal-blue;
+
   object-fit: cover;
 
   @include vp-1023 {
@@ -27,8 +29,6 @@
   width: 100%;
   height: 100%;
   margin: 0 auto;
-
-  background-color: $color-royal-blue;
 
   object-fit: cover;
   text-indent: -100vw;
