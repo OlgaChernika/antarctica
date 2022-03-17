@@ -22,8 +22,6 @@
 
   width: 100%;
   height: 100%;
-
-  background-color: $color-pattens-blue;
 }
 
 .booking__bg img {
@@ -32,6 +30,8 @@
   margin: 0 auto;
 
   object-fit: cover;
+  text-indent: -100vw;
+  background-color: $color-pattens-blue;
 }
 
 .booking__container {
@@ -59,7 +59,7 @@
 }
 
 .booking h2 {
-  margin: 0 0 9px;
+  margin: -7px 0 9px;
 
   font-weight: 700;
   font-size: 40px;

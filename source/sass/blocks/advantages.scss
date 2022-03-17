@@ -20,8 +20,6 @@
 
   width: 100%;
   height: 100%;
-
-  background-color: $color-pattens-blue;
 }
 
 .advantages__bg img {
@@ -31,6 +29,8 @@
   margin: 0 auto;
 
   object-fit: cover;
+  text-indent: -100vw;
+  background-color: $color-pattens-blue;
 }
 
 
@@ -60,56 +60,57 @@
   @include vp-767 {
     gap: 3%;
   }
-}
 
-.advantages li {
-  position: relative;
+  li {
+    position: relative;
 
-  width: 31%;
-  min-height: 241px;
-  margin-bottom: 30px;
-  padding: 81px 30px 28px;
+    width: 31%;
+    min-height: 241px;
+    margin-bottom: 30px;
+    padding: 81px 30px 22px;
 
-  background-color: $color-alice-blue;
+    background-color: $color-alice-blue;
 
-  @include vp-1023 {
-    width: 30.39%;
-    min-height: 310px;
-    padding: 72px 18px 20px 20px;
+    @include vp-1023 {
+      width: 30.39%;
+      min-height: 310px;
+      padding: 72px 18px 20px 20px;
+    }
+
+    @include vp-767 {
+      width: 290px;
+      min-height: 250px;
+      padding: 71px 20px 20px;
+    }
   }
 
-  @include vp-767 {
-    width: 290px;
-    min-height: 250px;
-    padding: 71px 20px 20px;
+  h3 {
+    margin: 0 0 10px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
+    @include vp-1023 {
+      line-height: 25px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 8px;
+      padding-right: 49px;
+    }
   }
-}
 
-.advantages h3 {
-  margin: 0 0 10px;
+  p {
+    margin: 0;
+    padding-right: 10px;
 
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-
-  @include vp-1023 {
-    line-height: 25px;
-  }
-
-  @include vp-767 {
-    margin: 0 0 8px;
-    padding-right: 49px;
-  }
-}
-
-.advantages ul p {
-  margin: 0;
-
-  font-size: 14px;
-  line-height: 19px;
-
-  @include vp-1023 {
+    font-size: 14px;
     line-height: 20px;
+
+    @include vp-1023 {
+      padding: 0;
+    }
   }
 }
 

@@ -40,6 +40,8 @@
     line-height: 20px;
     color: $color-alice-blue;
 
+    user-select: none;
+
     @include vp-1023 {
       font-size: 14px;
       line-height: 17px;
